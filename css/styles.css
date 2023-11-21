@@ -227,8 +227,7 @@ footer {
   font-family: sans-serif; }
 
 .row {
-  margin: 0;
-  padding: 0; }
+  width: 100%; }
 
 .titulohes {
   margin: 4rem;
