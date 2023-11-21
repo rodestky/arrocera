@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-main {
   flex: 1;
   display: flex;
@@ -103,14 +104,15 @@
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   background: linear-gradient(to right, #00093c, #9c908b);
   color: #fff;
   padding: 10px 0 30px;
   border-top-left-radius: 125px;
   font-size: 13px;
-  line-height: 20px; }
+  line-height: 20px;
+  margin: 0; }
   footer .pie {
     width: 85%;
     margin: auto;
@@ -217,3 +219,63 @@ footer {
         flex-basis: 100%; }
         footer .piecol:nth-child(2), footer .piecol:nth-child(3) {
           flex-basis: 100%; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.row {
+  margin: 0;
+  padding: 0; }
+
+.titulohes {
+  margin: 4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+  .titulohes h1 {
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-indent: 4rem; }
+
+.carousel-item img {
+  height: 45rem;
+  /* Ajusta este valor a la altura que desees */
+  object-fit: contain;
+  /* Esto asegura que las imágenes se redimensionen correctamente */
+  margin: 0;
+  padding: 0; }
+
+.description p {
+  margin: 2rem 3rem 2rem 3rem;
+  font-size: 1.5rem;
+  text-align: center; }
+  .description p span {
+    font-weight: bold; }
+
+.mees {
+  display: flex;
+  align-items: center; }
+  .mees iframe {
+    width: 90%;
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+    margin-right: 0;
+    padding-right: 0; }
+
+.mees2 p {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.5rem;
+  text-align: centrer;
+  /* Alinea el texto a la derecha */
+  padding: 1rem;
+  margin-left: auto;
+  /* Deja espacio en blanco a la izquierda */ }
+
+/* Estilos específicos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .col-12,
+  .col-md-6 {
+    width: 100%; } }
