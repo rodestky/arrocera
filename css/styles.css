@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-main {
   flex: 1;
   display: flex;
@@ -16,6 +17,16 @@
   align-items: center;
   justify-content: center;
   height: 100%; }
+  .form-container span {
+    font-size: 17px; }
+  .form-container button {
+    background: transparent; }
+  .form-container a .btn {
+    font-size: 1.5rem; }
+  .form-container a:hover {
+    background-color: #e8ff1c;
+    color: #000;
+    border-radius: 2rem; }
 
 .form-container span {
   text-align: center;
@@ -71,6 +82,18 @@
     transform: translateX(0); }
   .container.active .toggle-panel.toggle-rigth {
     transform: translateX(200%); }
+  .toggle-panel button {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff; }
+    .toggle-panel button:hover {
+      background-color: #e8ff1c;
+      color: #000;
+      border-radius: 2rem; }
+
+.animate__heartBeat {
+  animation-duration: 10s; }
 
 @media screen and (max-width: 768px) {
   .containerSelect {
@@ -81,14 +104,15 @@
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   background: linear-gradient(to right, #00093c, #9c908b);
   color: #fff;
   padding: 10px 0 30px;
   border-top-left-radius: 125px;
   font-size: 13px;
-  line-height: 20px; }
+  line-height: 20px;
+  margin: 0; }
   footer .pie {
     width: 85%;
     margin: auto;
@@ -195,3 +219,186 @@ footer {
         flex-basis: 100%; }
         footer .piecol:nth-child(2), footer .piecol:nth-child(3) {
           flex-basis: 100%; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.row {
+  width: 100%; }
+
+.titulohes {
+  margin: 4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+  .titulohes h1 {
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-indent: 4rem; }
+
+.carousel-item img {
+  height: 45rem;
+  /* Ajusta este valor a la altura que desees */
+  object-fit: contain;
+  /* Esto asegura que las imágenes se redimensionen correctamente */
+  margin: 0;
+  padding: 0; }
+
+.description p {
+  margin: 2rem 3rem 2rem 3rem;
+  font-size: 1.5rem;
+  text-align: center; }
+  .description p span {
+    font-weight: bold; }
+
+.mees {
+  display: flex;
+  align-items: center; }
+  .mees iframe {
+    width: 90%;
+    margin: 0;
+    margin-left: 2rem;
+    padding-left: 3rem;
+    margin-right: 0;
+    padding-right: 0; }
+  .mees p {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 1.5rem;
+    text-align: centrer;
+    /* Alinea el texto a la derecha */
+    padding-left: 3rem;
+    margin-right: auto;
+    /* Deja espacio en blanco a la izquierda */ }
+
+.mees2 p {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.5rem;
+  text-align: centrer;
+  /* Alinea el texto a la derecha */
+  padding: 1rem;
+  margin-left: auto;
+  /* Deja espacio en blanco a la izquierda */ }
+
+.mees2 img {
+  margin-top: 0;
+  padding-top: 0;
+  display: block;
+  /* Para que el margin-left: auto funcione */
+  margin-left: auto;
+  /* Deja espacio en blanco a la izquierda */
+  margin-right: 0;
+  /* Alinea la imagen a la derecha */
+  max-width: 100%;
+  /* Asegura que la imagen no supere su contenedor */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  border-radius: 5px; }
+
+.mees3 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos se envuelvan si no caben en la misma fila */
+  justify-content: space-between;
+  /* Espacio entre los elementos en el contenedor */
+  align-items: flex-start;
+  /* Alinea los elementos en la parte inferior del contenedor */ }
+  .mees3 img {
+    /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    width: 45%;
+    margin-right: 3rem;
+    max-width: 100%;
+    padding: 0;
+    /* Evita que la imagen supere su tamaño natural */
+    border-radius: 5px; }
+  .mees3 p {
+    flex: 0 0 calc(50% - 1rem);
+    /* Ocupa el 50% del ancho y deja un espacio de 1rem entre los elementos */
+    margin-top: 3rem;
+    /* Espacio en blanco arriba del texto */
+    padding-top: 4rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-left: 3rem; }
+
+.esfi {
+  text-align: center; }
+  .esfi h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 2rem;
+    display: inline-block;
+    /* Hace que el contenedor tenga solo el ancho del contenido */
+    border-bottom: 2px solid rgba(76, 175, 80, 0.5);
+    /* Subrayado biselado verde transparente */
+    padding-bottom: 10px;
+    /* Espacio entre el texto y el subrayado */ }
+
+.direcciones {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+  margin-left: 2.3rem;
+  margin-right: 2.3rem;
+  margin-bottom: 1.2rem; }
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  margin: 0; }
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 2rem;
+  flex: 0 0 600px;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem; }
+
+.map-container {
+  height: 300px;
+  margin-top: 20px;
+  overflow: hidden; }
+
+.card-container::-webkit-scrollbar {
+  width: 12px;
+  /* Ancho de la barra de desplazamiento */
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #4CAF50;
+  /* Color de la barra de desplazamiento */
+  border-radius: 10px;
+  /* Borde redondeado */ }
+
+.card h2 {
+  position: relative; }
+
+.card h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50%;
+  background-color: rgba(76, 175, 80, 0.2);
+  /* Línea de borde biselado verde transparente */
+  position: absolute;
+  bottom: 0;
+  left: 25%; }
+
+/* Estilos específicos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .col-12,
+  .col-md-6 {
+    width: 100%; } }

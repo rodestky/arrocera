@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    position: absolute;
+    position:relative;
     bottom: 0px;
     background: linear-gradient(to right, #00093c, #9c908b);
     color: #fff;
@@ -8,6 +8,7 @@ footer {
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
+    margin: 0;
 
     .pie {
         width: 85%;
