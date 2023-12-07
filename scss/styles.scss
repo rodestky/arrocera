@@ -2,6 +2,7 @@
 @import "footer";
 @import "eshome";
 @import "esconvenio";
+@import "escontactame";
 
 
 *{
@@ -10,281 +11,271 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.contactame{
-  margin: 1rem;
-}
-.cabececontacto{
-    text-align: center;
-    margin: 2rem;
-    p{
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-}
-.contactanos{
-    .cardcontacto{
-        img{
-            width: 9rem;
-            margin: 0;
-            padding: 0;
-        }
-        p{
-            font-size: 1.3rem;
-        }
-    }
-}
 
-  .cardcontacto-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    
-  }
 
-  /**otra card **/
-  .cardotra {
-  overflow: visible;
-  width: 190px;
-  height: 254px;
-}
-.otracard{
+
+
+/* ESTO ES LA PARTE DE HISTORIA */
+.histor {
   display: flex;
-    .cardotra{
-        margin: 2rem;
-        height: 30rem;
-        .content{
-            .back{
-                .back-content{
-                    img{
-                        margin-top: 10rem;
-                        object-fit: cover; /* Otra opción podría ser 'contain' dependiendo de tus necesidades */
-                        width: 100%; /* Ajusta el ancho al 100% del contenedor */
-                        height: 100%; /* Ajusta la altura al 100% del contenedor */
-                        
-                    }
-                    h2{
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
+  flex-direction: column;
+  gap: 7rem;
 }
 
-.content {
+@media (min-width: 768px) {
+  .histor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.item-hints {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .item-hints {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+}
+
+.item-hints .hint {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .item-hints .hint {
+    flex-direction: row;
+  }
+}
+
+.item-hints .hint-dot {
+  margin-top: 0;
+}
+
+.item-hints .hint-contento {
+  width: 50rem;
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 0;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: black;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.item-hints .hint-contento p {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .item-hints .hint-contento {
+    flex-direction: row;
+  }
+}
+
+.item-hints .hint .hint-contento {
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 1;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: black;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.item-hints .hint-contento::before {
+  width: 0px;
+  bottom: 29px;
+  left: 0;
+  content: "";
+  background-color: black;
+  height: 1px;
+  position: absolute;
+  transition: width 0.4s;
+}
+
+.item-hints .hint:hover .hint-contento::before {
+  width: 180px;
+  transition: width 0.4s;
+}
+
+.item-hints .hint-contento::after {
+  transform-origin: 0 59%;
+  transform: rotate(-220deg);
+  bottom: 45px;
+  left: 0;
+  width: 80px;
+  content: "";
+  background-color: black;
+  height: 1px;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  transition-delay: 0s;
+}
+.item-hints .hint:hover .hint-contento::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item-hints .hint[data-position="4"] .hint-contento {
+  bottom: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+
+.item-hints .hint-dot {
+  z-index: 3;
+  border: 4rem solid greenyellow;
+  border-radius: 60%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-0%, -0%) scale(0.95);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.item-hints .hint-radius {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+.history-container {
+  position: relative;
+}
+
+.history-image {
+  border-radius: 20px;
+  margin-left: 45rem;
+  transition: margin-left 0.7s ease;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: transparent;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: scaleY(1);
+}
+
+.button-contento {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
   width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(82.3deg, rgb(121, 233, 93) 10.8%, rgb(210, 238, 88) 94.3%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  scale: 0.9;
+}
+
+
+/** final carrusel */
+.container__slider {
+  max-width: 1000px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.carruhisto {
+  width: 100%;
+  max-width: 800px;
   height: 100%;
+  max-height: 600px;
   transform-style: preserve-3d;
-  transition: transform 300ms;
-  box-shadow: 0px 0px 10px 1px #000000ee;
-  border-radius: 5px;
-  margin: 2rem;
-}
-
-.front, .back {
-  background-color: #ffffff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.back {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  
-}
-
-.back::before {
-  position: absolute;
-  content: ' ';
-  display: block;
-  width: 160px;
-  height: 160%;
-  background: linear-gradient(90deg, transparent, #85ff66, rgba(0, 0, 0, 0.301), #6bff66, #e8ff66, transparent);
-  animation: rotation_481 5000ms infinite linear;
-}
-
-.back-content {
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  background-color: #f8f7f7;
-  border-radius: 5px;
-  color: rgb(2, 2, 2);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 
-.cardotra:hover .content {
-  transform: rotateY(180deg);
-}
-
-@keyframes rotation_481 {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  0% {
-    transform: rotateZ(360deg);
-  }
-}
-
-.front {
-  transform: rotateY(180deg);
-  color: white;
-}
-
-.front .front-content {
-  position: absolute;
+.carruhisto .cardshi {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  small{
-    font-size: 1rem;
-    background:#6bff66 ;
-    color: black;
-  }
 }
 
-.front-content .badge {
-  
+.carruhisto .cardhi {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.carruhisto .cardhi img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
-  backdrop-filter: blur(2px);
-  width: fit-content;
-}
-
-.description {
-  box-shadow: 0px 0px 10px 5px #00000088;
-  background-color: #00000099;
-  backdrop-filter: blur(2px);
-  border-radius: 5px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
-.front .img {
-  position: fixed;
-  height: 90%;
-  max-height: 90%;
-  object-fit: fill;
+.carruhisto #item-2:checked ~ .cardshi #selector-1,
+.carruhisto #item-1:checked ~ .cardshi #selector-3,
+.carruhisto #item-3:checked ~ .cardshi #selector-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.6;
+  z-index: 0;
 }
 
-.circle {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: #f3fca1;
-  position: relative;
-  filter: blur(15px);
-  animation: floating 2600ms infinite linear;
+.carruhisto #item-3:checked ~ .cardshi #selector-1,
+.carruhisto #item-1:checked ~ .cardshi #selector-2,
+.carruhisto #item-2:checked ~ .cardshi #selector-3 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.6;
+  z-index: 0;
 }
 
-#bottom {
-  background-color: #f5ff66;
-  left: 50px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  animation-delay: -800ms;
-}
-
-#right {
-  background-color: #34ff22;
-  left: 160px;
-  top: -80px;
-  width: 30px;
-  height: 30px;
-  animation-delay: -1800ms;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/** boton de la card*/
-.button {
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: transparent;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .button:hover::before {
-    transform: scaleY(1);
-  }
-  
-  .button-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgb(121, 233, 93) 10.8%,
-      rgb(210, 238, 88) 94.3%
-    );
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .button:active {
-    scale: 0.9;
-  }
-  /* Estilos para centrar las tarjetas y ajustar márgenes */
-.otracard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.cardotra {
-  width: 300px; /* Ajusta el ancho de la tarjeta según tus necesidades */
-  margin: 20px; /* Ajusta el margen entre tarjetas según tus necesidades */
-}
-
-/* Ajustes para pantallas pequeñas (tablets y teléfonos) */
-@media (max-width: 767px) {
-  .cardotra {
-      width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
-  }
+.carruhisto #item-1:checked ~ .cardshi #selector-1,
+.carruhisto #item-2:checked ~ .cardshi #selector-2,
+.carruhisto #item-3:checked ~ .cardshi #selector-3 {
+  transform: translateX(0) scale(1);
+  z-index: 1;
 }

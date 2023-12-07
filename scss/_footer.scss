@@ -1,6 +1,7 @@
 footer {
+    margin: 0;  /* Agregado */
+    padding: 0; /* Agregado */
     width: 100%;
-    position:relative;
     bottom: 0;
     background: linear-gradient(to right, #00093c, #9c908b);
     color: #fff;
@@ -10,8 +11,11 @@ footer {
     line-height: 20px;
     margin: 0;
     max-width: 100%;
+    z-index: 1000;
 
     .pie {
+        margin: 0;  /* Agregado */
+        padding: 0; /* Agregado */
         width: 85%;
         margin: auto;
         display: flex;
