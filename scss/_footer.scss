@@ -170,3 +170,40 @@ footer {
         }
     }
 }
+.navbar {
+    
+    background: linear-gradient(to right, #ffff00,  #008000, #9c908b);
+    position: relative;
+    
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(100px); /* Ajusta el valor de blur según sea necesario */
+    z-index: -1;
+}
+/* Add the following CSS styles to your stylesheet */
+.flags {
+    width: 75px;
+    display: flex;
+    align-items: end;
+    margin: 1rem;
+    justify-content: space-between;
+    margin-right: 10rem;
+    margin-left: auto;
+}
+
+.flags__items {
+    width: 30px;
+    cursor: pointer; /* Añadí el estilo cursor: pointer aquí */
+}
+
+.flags__img {
+    display: block;
+}

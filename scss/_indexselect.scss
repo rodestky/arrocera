@@ -28,6 +28,8 @@
     }
     button{
         background: transparent;
+        border: 0.05px solid #00ff55;
+        border-radius: 1rem;
     }
     a{
         .btn{
@@ -114,6 +116,8 @@
         border: none;
         font-size: 2rem;
         color: #fff;
+        border: 0 solid;
+        
         &:hover{
             background-color: #e8ff1c;
             color: #000;
@@ -137,3 +141,47 @@
     }
   }
   
+
+  button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  
+  #btn:hover,:focus {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 5px #00ff55,
+                0 0 20px #5eff00,
+                0 0 50px #73ff00,
+                0 0 100px #d0ff00;
+  }
+
+  .btn.shake {
+    animation: shakeAnimation 0.5s infinite linear;
+}
+
+@keyframes shakeAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-1px); /* Puedes ajustar la amplitud del temblor cambiando este valor */
+    }
+}
+
+
+
