@@ -350,7 +350,7 @@ footer {
     margin-top: 0;
     padding-top: 0;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: justify;
     /* Alinea el texto a la derecha */
     padding-left: 3rem;
     margin-right: auto;
@@ -892,11 +892,15 @@ footer {
     width: 100%;
     /* Ocupa todo el ancho en dispositivos pequeños */ } }
 
+@font-face {
+  font-family: 'arnol';
+  src: url("../fuentes/Arno Pro Italic.ttf") format("woff2"), url("../fuentes/Arno Pro Italic.ttf") format("woff"); }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif; }
+  font-family: arnol; }
 
 /* ESTO ES LA PARTE DE HISTORIA */
 /** final carrusel */

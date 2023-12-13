@@ -4,12 +4,17 @@
 @import "esconvenio";
 @import "escontactame";
 
+@font-face {
+  font-family: 'arnol';
+  src: url('../fuentes/Arno\ Pro\ Italic.ttf') format('woff2'),
+       url('../fuentes/Arno\ Pro\ Italic.ttf') format('woff');
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    font-family: arnol;
 }
 
 
